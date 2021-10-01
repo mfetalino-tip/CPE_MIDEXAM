@@ -1,0 +1,7 @@
+---
+
+- name: Unable Firewall
+  service:
+    name: ufw
+    state: stopped
+    enabled: no

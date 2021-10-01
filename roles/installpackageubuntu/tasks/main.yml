@@ -1,0 +1,27 @@
+---
+
+- name: Create apt key
+  apt_key:
+    url: "{{ url }}"
+    state: present
+  when: url != ""
+
+- name: Create repository
+  apt_repository:
+    repo: "{{ repo }}"
+    state: present
+    filename: "{{ package }}.list"
+  when: repo != ""
+
+- name: Installing package
+  apt:
+    name: "{{ package }}"
+    state: latest
+    update_cache: yes
+
+- name: Enable service
+  service:
+    name: "{{ service }}"
+    state: started
+    enabled: yes
+  when: service != ""
