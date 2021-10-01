@@ -1,0 +1,15 @@
+elasticsearch_host: localhost
+systemd_src: elastic-confg
+
+kibana_host: localhost
+
+logstash_conf: logstash-conf
+
+nagios_user: nagiosadmin
+nagios_password: password
+
+domain: micofetalino
+owner: micofetalino
+group: micofetalino
+index_html: index.html
+ubuntu_src: micofetalinoubuntu.conf
